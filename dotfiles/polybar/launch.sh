@@ -7,4 +7,5 @@ killall -q polybar
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch bar1 and bar2
-polybar top &
+MONITOR=eDP1 TRAY=right polybar main &
+MONITOR=DP1-2-8 polybar main &
