@@ -1,6 +1,6 @@
 # exec --no-startup-id compton --config ~/.i3/compton.conf --xrender-sync-fence
 # set $Locker csxlock -f '-*-clean-*-*-*-*-*-*-*-*-*-*-*-*' -b '#000000' -o '$color_focus' -w '#C795AE'
-set $Locker i3lock-fancy
+set $Locker i3lock-fancy -p
 set $mod Mod4
 
 workspace_layout tabbed
