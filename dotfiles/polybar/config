@@ -6,6 +6,9 @@ red = #C795AE
 muted = #AAAAAA
 
 
+[settings]
+screenchange-reload = true
+
 
 [bar/main]
 width = 100%

@@ -1,6 +1,9 @@
-# exec --no-startup-id compton --config ~/.i3/compton.conf --xrender-sync-fence
-# set $Locker csxlock -f '-*-clean-*-*-*-*-*-*-*-*-*-*-*-*' -b '#000000' -o '$color_focus' -w '#C795AE'
-set $Locker i3lock-fancy -p
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+exec --no-startup-id compton --config ~/.i3/compton.conf --xrender-sync-fence
+set $Wallpaper feh --randomize --bg-fill ~/Pictures/Wallpapers
+exec-always --no-startup-id $Wallpaper
+set $Locker csxlock -f '-*-clean-*-*-*-*-*-*-*-*-*-*-*-*' -b '#000000' -o '#C3E88D' -w '#C795AE'
+# set $Locker i3lock-fancy -p
 set $mod Mod4
 
 workspace_layout tabbed
@@ -125,6 +128,7 @@ bindsym --release Shift+Print exec --no-startup-id maim -s | xclip -selection cl
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
+bindsym $mod+Shift+w exec $Wallpaper
 bindsym $mod+Shift+u exec unfuck-display
 
 # resize window

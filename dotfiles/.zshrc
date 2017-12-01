@@ -1,4 +1,4 @@
-export ZSH=~/.oh-my-zsh
+export ZSH=/usr/share/oh-my-zsh/
 plugins=(git extract ssh-agent systemd zsh-completions npm)
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
