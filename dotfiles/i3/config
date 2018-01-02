@@ -1,5 +1,5 @@
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
-exec --no-startup-id compton --config ~/.i3/compton.conf --xrender-sync-fence
+# exec --no-startup-id compton --config ~/.i3/compton.conf --xrender-sync-fence
 set $Wallpaper feh --randomize --bg-fill ~/Pictures/Wallpapers
 exec-always --no-startup-id $Wallpaper
 set $Locker csxlock -f '-*-clean-*-*-*-*-*-*-*-*-*-*-*-*' -b '#000000' -o '#C3E88D' -w '#C795AE'

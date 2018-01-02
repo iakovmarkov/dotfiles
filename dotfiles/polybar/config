@@ -78,7 +78,7 @@ label-padding = 4
 [module/date]
 type = internal/date
 interval = 1
-date = %A %d %m, 
+date = %A %d.%m.%y, 
 time = %H:%M
 label = %date% %time%
 format = <label>
@@ -132,7 +132,7 @@ format-warn = <ramp> <label-warn>
 label = %temperature%
 label-warn-foreground = ${colors.red}
 format-warn-underline = ${colors.red}
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
