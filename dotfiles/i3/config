@@ -1,5 +1,4 @@
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
-# exec --no-startup-id compton --config ~/.i3/compton.conf --xrender-sync-fence
 set $Wallpaper feh --randomize --bg-fill ~/Pictures/Wallpapers
 exec-always --no-startup-id $Wallpaper
 set $Locker csxlock -f '-*-clean-*-*-*-*-*-*-*-*-*-*-*-*' -b '#000000' -o '#C3E88D' -w '#C795AE'
@@ -57,10 +56,9 @@ bindsym $mod+Shift+9 move container to workspace $WS9
 bindsym $mod+Shift+0 move container to workspace $WS0
 
 # app-specific
-for_window[class="jetbrains-idea"] move container to workspace $WS2
-for_window[class="jetbrains-phpstorm"] move container to workspace $WS2
-for_window[class="jetbrains-webstorm"] move container to workspace $WS2
-for_window [title="todoist"] move container to workspace $WS8
+for_window [class="jetbrains-idea"] move container to workspace $WS2
+for_window [class="jetbrains-phpstorm"] move container to workspace $WS2
+for_window [class="jetbrains-webstorm"] move container to workspace $WS2
 for_window [class="Thunderbird"] move container to workspace $WS9
 for_window [class="Evolution"] move container to workspace $WS9
 for_window [class="Franz"] move container to workspace $WS9
@@ -68,17 +66,16 @@ for_window [class="Skype"] move container to workspace $WS9
 for_window [class="Spotify"] move container to workspace $WS0
 for_window [class="Pavucontrol"] move container to workspace $WS0
 for_window [class="Shutter"] floating enable
-for_window [class="Nautilus"] floating enable
-for_window [class="Nautilus"] border 1pixel
-for_window [class="Nautilus"] resize shrink width 100000px
-for_window [class="Nautilus"] resize shrink height 100000px
-for_window [class="Nautilus"] resize grow width 1000px
-for_window [class="Nautilus"] resize grow height 600px
+for_window [class="Nautilus"] floating enable, border 1pixel, move position center, resize set 1040 680
+for_window [title="Search emoji"] floating enable, sticky enable, move position center
 
 # kill focused window
 bindsym $mod+w kill
-
+bindsym $mod+s sticky toggle
 bindsym $mod+b border toggle
+
+bindsym $mod+Mod1+space exec "emoji-keyboard -s"
+bindsym $mod+Mod1+Ctrl+space exec "emoji-keyboard -k"
 
 bindsym $mod+space exec "rofi -combi-modi window,drun -show combi -modi combi -font 'Fira Mono 10' -display-combi 'run' -display-drun run -width 30 -lines 5 -padding 10 -separator-style none -hide-scrollbarw"
 bindsym $mod+Shift+space exec "rofi -show run -modi run -font 'Fira Mono 10' -width 30 -lines 5 -padding 10 -separator-style none -hide-scrollbarw -run-command 'zsh -ic {cmd}'"
@@ -106,7 +103,6 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f floating toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
