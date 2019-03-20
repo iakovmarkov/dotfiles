@@ -1,5 +1,5 @@
+plugins=(git extract ssh-agent systemd zsh-completions npm command-time)
 export ZSH=/usr/share/oh-my-zsh/
-plugins=(git extract ssh-agent systemd zsh-completions npm)
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 source $ZSH/oh-my-zsh.sh

@@ -1,12 +1,11 @@
-exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 set $Wallpaper feh --randomize --bg-fill ~/Pictures/Wallpapers
-exec-always --no-startup-id $Wallpaper
 set $Locker csxlock -f '-*-clean-*-*-*-*-*-*-*-*-*-*-*-*' -b '#000000' -o '#C3E88D' -w '#C795AE'
-# set $Locker i3lock-fancy -p
 set $mod Mod4
 
 workspace_layout tabbed
 font pango:Fira Sans 12px
+new_window 1pixel
+focus_follows_mouse no
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -68,6 +67,7 @@ for_window [class="Pavucontrol"] move container to workspace $WS0
 for_window [class="Shutter"] floating enable
 for_window [class="Nautilus"] floating enable, border 1pixel, move position center, resize set 1040 680
 for_window [title="Search emoji"] floating enable, sticky enable, move position center
+for_window [class="MEGAsync"] floating enable move down 30px
 
 # kill focused window
 bindsym $mod+w kill
@@ -125,7 +125,10 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 bindsym $mod+Shift+w exec $Wallpaper
-bindsym $mod+Shift+u exec unfuck-display
+bindsym $mod+Shift+u exec "unfuck-display; ~/.config/polybar/launch.sh"
+
+bindsym XF86PowerOff exec systemctl suspend -i
+bindsym $mod+l exec "xset dpms force off"
 
 # resize window
 bindsym $mod+r mode "resize"
@@ -138,9 +141,15 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym XF86PowerOff exec systemctl suspend -i
-bindsym $mod+l exec $Locker
-bindsym $mod+Shift+l exec "xset dpms force off"
+# Window colors
+set $color_bg   #13191c
+set $color_text #868686
+set $color_focus #C3E88D
+client.focused              $color_bg $color_bg $color_focus $color_bg
+client.focused_inactive     $color_bg $color_bg $color_text $color_bg
+client.unfocused            $color_bg $color_bg $color_text $color_bg
+client.urgent               #C795AE #C795AE $color_bg #C795AE
+
 exec_always xset dpms 120
 exec --no-startup-id xss-lock -- $Locker
 exec dunst -config ~/.i3/dunst -fn 'Fira Sans 10'
@@ -148,40 +157,6 @@ exec nm-applet
 exec redshift
 
 exec_always setxkbmap 'us,ru' -option 'grp:caps_toggle,grp_led:caps'
-
-set $color_bg   #13191c
-set $color_text #868686
-set $color_focus #C3E88D
-
-# Window colors
-client.focused              $color_bg $color_bg $color_focus $color_bg
-client.focused_inactive     $color_bg $color_bg $color_text $color_bg
-client.unfocused            $color_bg $color_bg $color_text $color_bg
-client.urgent               #C795AE #C795AE $color_bg #C795AE
-new_window 1pixel
-focus_follows_mouse no
-
-
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+exec-always --no-startup-id $Wallpaper
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
-#bar {
-#    position top
-#    mode dock
-#    strip_workspace_numbers yes
-#    #status_command i3status -c ~/.i3/i3status.conf
-#    #status_command i3blocks -c ~/.i3/i3blocks.conf
-#    status_command ~/.config/polybar/launch.sh
-#    font xft:Fira Sans 12px
-#
-#    tray_output eDP1
-#    tray_padding 0
-#    colors {
-#        background $color_bg
-#        separator  $color_text
-#        statusline #FEFEFE
-#
-#        focused_workspace  $color_bg $color_bg $color_focus
-#        active_workspace   $color_bg $color_bg $color_text
-#        inactive_workspace $color_bg $color_bg $color_text
-#        urgent_workspace   $color_bg $color_bg $color_focus
-#    }
-#}

@@ -10,9 +10,7 @@ alias bt="bluetoothctl"
 alias redshift="redshift -l 50.075538:14.437800"
 alias update="yaourt -Syu"
 
-function ssht () {/usr/bin/ssh -t $@ "tmux attach || tmux new";}
-
-export PATH=/home/markov/.ssh-scripts/:$PATH
+export NOMAD_ADDR=http://nomad.atc:4646
 export EDITOR=nano
 
 eval $(thefuck --alias fuck)
@@ -20,4 +18,3 @@ eval $(thefuck --alias fuck)
 ssh-add ~/.ssh/keys/* &> /dev/null
 
 . /etc/profile.d/vte.sh
-
