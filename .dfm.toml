@@ -1,0 +1,3 @@
+manifest = [".i3/config",".secrets",".config/polybar/launch.sh.dotdropbak",".i3/i3blocks.conf.dotdropbak",".config/polybar/polybar/config",".tmux.conf",".config/polybar/config",".config/polybar/polybar/launch.sh",".config/polybar/config.dotdropbak",".i3/config.dotdropbak",".i3/dunst.dotdropbak",".config/polybar/polybar/mpris.sh",".i3/compton.conf.dotdropbak",".config/polybar/mpris.sh.dotdropbak",".config/polybar/launch.sh",".i3/i3status.conf",".zshrc",".i3/compton.conf",".config/polybar/mpris.sh",".config/polybar/weather",".config/polybar/polybar/weather",".i3/dunst",".config/polybar/weather.dotdropbak",".profile",".config/polybar/pkg.sh"]
+repos = ["files"]
+target = "/home/markov"
