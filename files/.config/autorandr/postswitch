@@ -1,0 +1,5 @@
+#!/bin/sh
+
+setxkbmap 'us,ru' -option 'grp:caps_toggle,grp_led:caps'
+~/.config/polybar/launch.sh
+feh --randomize --bg-fill ~/Pictures/Wallpapers

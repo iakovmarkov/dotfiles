@@ -14,8 +14,8 @@ export DRONE_SERVER=https://drone.atc.services
 export EDITOR=nano
 export PATH=~/.local/bin/:$PATH
 
-source .secrets
+source ~/.secrets
 
 DEV=$(xinput list | grep TouchPad | cut --fields=2 | cut -d = -f 2)
-PROP=$(xinput list-props $DEV | grep "Disable While Typing Enabled (" | cut -d '(' -f 2 | cut -d ')' -f 1)
-#xinput set-prop $DEV $PROP 0
+#PROP=$(xinput list-props $DEV | grep "Disable While Typing Enabled (" | cut -d '(' -f 2 | cut -d ')' -f 1)
+xinput set-prop $DEV 326 0

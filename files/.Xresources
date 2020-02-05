@@ -1,0 +1,82 @@
+*customization: 			-color
+XTerm*termName:  			xterm-256color
+URxvt.termName:         	xterm-256color
+*VT100.colorBDMode:     true
+URxvt.font: 				xft:Fira Mono for Powerline:pixelsize=13,style=regular
+URxvt.boldFont: 			xft:Fira Mono for Powerline:pixelsize=13,style=bold
+URxvt.italicFont: 			xft:Fira Mono for Powerline:pixelsize=13,style=bold
+URxvt.boldItalicFont: 		xft:Fira Mono for Powerline:pixelsize=13,style=bold
+URxvt*scrollBar:        	false
+URxvt*perl-lib:         	/usr/lib/URxvt/perl/
+URxvt*perl-ext-common:  	default,matcher,selection-to-clipboard
+URxvt*urlLauncher:      	/usr/in/google-chrome-stable
+URxvt*matcher.button:   	1
+URxvt.internalBorder:  		0
+URxvt.keysym.Home:			\033[1~
+URxvt.keysym.End:			\033[4~
+URxvt.keysym.KP_Home:		\033[1~
+URxvt.keysym.KP_End:		\033[4~
+URxvt.perl-ext-common:		default,matcher
+URxvt.url-launcher:			/usr/bin/xdg-open
+URxvt.matcher.button:		1
+
+Xft.dpi:                	96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+
+URxvt.background:       #13191c
+
+URxvt.pointerBlank:         true
+URxvt.depth:                32
+URxvt.transparent:   false
+! URxvt.tintColor:     #13191c
+URxvt.tintColor:     #FFFFFF
+URxvt.shading:       1
+
+! special
+*.foreground:   #a7a7a7
+*.background:   #13191c
+*.cursorColor:  #a7a7a7
+
+! black
+*.color0:       #13191c
+*.colour8:       #273239
+*.color18:       #192124
+*.color19:       #a7a7a7
+
+! red
+*.color1:       #FF5370
+*.color9:       #FF5370
+
+! green
+*.color2:       #C3E88D
+*.color10:      #C3E88D
+
+! yellow
+*.color3:       #FFCB6B
+*.color11:      #FFCB6B
+
+! blue
+*.color4:       #82AAFF
+*.color12:      #82AAFF
+
+! magenta
+*.color5:       #C792EA
+*.color13:      #C792EA
+
+! cyan
+*.color6:       #89DDFF
+*.color14:      #89DDFF
+
+! white
+*.color7:       #c7ccd1
+*.color15:      #ffffff
+
+
+rofi.color-enabled: true
+rofi.color-window: #273238, #273238, #1e2529
+rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
+rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
+rofi.color-urgent: #273238, #C795AE, #273238, #394249, #C795AE

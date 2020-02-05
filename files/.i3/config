@@ -61,6 +61,7 @@ for_window [class="jetbrains-webstorm"] move container to workspace $WS2
 for_window [class="Thunderbird"] move container to workspace $WS9
 for_window [class="Evolution"] move container to workspace $WS9
 for_window [class="Franz"] move container to workspace $WS9
+for_window [class="Ferdi"] move container to workspace $WS9
 for_window [class="Skype"] move container to workspace $WS9
 for_window [class="Spotify"] move container to workspace $WS0
 for_window [class="Pavucontrol"] move container to workspace $WS0
@@ -73,9 +74,6 @@ for_window [class="MEGAsync"] floating enable move down 30px
 bindsym $mod+w kill
 bindsym $mod+s sticky toggle
 bindsym $mod+b border toggle
-
-bindsym $mod+Mod1+space exec "emoji-keyboard -s"
-bindsym $mod+Mod1+Ctrl+space exec "emoji-keyboard -k"
 
 bindsym $mod+space exec "rofi -combi-modi window,drun -show combi -modi combi -font 'Fira Mono 10' -display-combi 'run' -display-drun run -width 30 -lines 5 -padding 10 -separator-style none -hide-scrollbarw"
 bindsym $mod+Shift+space exec "rofi -show run -modi run -font 'Fira Mono 10' -width 30 -lines 5 -padding 10 -separator-style none -hide-scrollbarw -run-command 'zsh -ic {cmd}'"
