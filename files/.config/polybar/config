@@ -132,7 +132,7 @@ format-warn = <ramp> <label-warn>
 label = %temperature%
 label-warn-foreground = ${colors.red}
 format-warn-underline = ${colors.red}
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
@@ -209,7 +209,7 @@ ramp-4 = 🌑
 
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 
 format-volume = <ramp-volume> <label-volume>
 format-muted = <label-muted>

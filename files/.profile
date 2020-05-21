@@ -17,5 +17,5 @@ export PATH=~/.local/bin/:$PATH
 source ~/.secrets
 
 DEV=$(xinput list | grep TouchPad | cut --fields=2 | cut -d = -f 2)
-#PROP=$(xinput list-props $DEV | grep "Disable While Typing Enabled (" | cut -d '(' -f 2 | cut -d ')' -f 1)
-xinput set-prop $DEV 326 0
+#ROP=$(xinput list-props $DEV | grep "Disable While Typing Enabled (" | cut -d '(' -f 2 | cut -d ')' -f 1)
+xinput set-prop $DEV 331 0

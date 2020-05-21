@@ -148,7 +148,7 @@ client.focused_inactive     $color_bg $color_bg $color_text $color_bg
 client.unfocused            $color_bg $color_bg $color_text $color_bg
 client.urgent               #C795AE #C795AE $color_bg #C795AE
 
-exec_always xset dpms 120
+exec_always xset dpms 300
 exec --no-startup-id xss-lock -- $Locker
 exec dunst -config ~/.i3/dunst -fn 'Fira Sans 10'
 exec nm-applet
